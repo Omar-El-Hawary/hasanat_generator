@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0f1a25, #2c485e);
+    font-family: 'Amiri', serif;
+    text-align: center;
+    position: relative;
+    overflow-y: auto;
+    padding-bottom: 200px;
+}
+
+.background-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.crescent {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80px;
+    height: 80px;
+    background: none;
+    border-radius: 50%;
+    box-shadow: -6px 6px 0px 4px rgba(255, 215, 0, 0.8);
+    opacity: 1;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 40%, #fff 1.5px, transparent 5px),
+                radial-gradient(circle at 70% 20%, #fff 1.5px, transparent 5px);
+    background-size: 200px 200px;
+    opacity: 0.5;
+}
+
+.content {
+    background: #fff;
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 420px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4a2c1f;
+    position: relative;
+    z-index: 1;
+    margin-top: 260px;
+    margin-bottom: 100px;
+}
+
+#quran-verse {
+    font-family: 'Scheherazade New', serif;
+    font-size: 24px;
+    color: #4a2c1f;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 500px) {
+    .content {
+        font-size: 20px;
+        padding: 15px 30px;
+        width: 70%;
+    }
+}
+
+.footer {
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
