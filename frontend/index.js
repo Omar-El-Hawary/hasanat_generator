@@ -37,6 +37,6 @@ function parsePage(ayahs){
         element += ` ${i["text"]} <span class="ayah-number">﴿${i["numberInSurah"]}﴾</span> `;
     }
 
-    document.getElementById("quran-verse").innerHTML = element.trim();
+    return element.trim()
 }
 main()
