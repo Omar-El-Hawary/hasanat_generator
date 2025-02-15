@@ -24,17 +24,19 @@ function getRandomPage(){
 
 
 function parsePage(ayahs){
-    let element = ""
-    let lastSurahNo = 0
-    for (i of ayahs){
-        if(i["surah"]["number"] !== lastSurahNo){
+    let element = "";
+    let lastSurahNo = 0;
+
+    for (let i of ayahs) {
+        if (i["surah"]["number"] !== lastSurahNo) {
             lastSurahNo = i["surah"]["number"];
-            element += "<br>" + i["surah"]["name"] ;
-            element +="<br>" ;
+            element += `<br><strong>${i["surah"]["name"]}</strong><br>`;
         }
-        element += " " +  i["text"]+ " ";
-        element += `﴿${i["numberInSurah"]}﴾`;
+
+        // Properly format verse number and ensure correct order
+        element += ` ${i["text"]} <span class="ayah-number">﴿${i["numberInSurah"]}﴾</span> `;
     }
-    document.getElementById("quran-verse").innerHTML = element.trimStart()
+
+    document.getElementById("quran-verse").innerHTML = element.trim();
 }
 main()

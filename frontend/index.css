@@ -66,6 +66,7 @@ body {
     color: #4a2c1f;
     text-align: center;
     padding: 20px;
+    direction: rtl;
 }
 
 @media (max-width: 500px) {
@@ -75,34 +76,9 @@ body {
         width: 70%;
     }
 }
-
-.footer {
-    width: 100%;
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-content p {
-    margin: 5px 0;
-}
-
-.footer-content a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.footer-content a:hover {
-    text-decoration: underline;
+.ayah-number {
+    font-family: 'Amiri Quran', serif; /* Ensure the Quranic font is applied */
+    display: inline-block;
+    direction: rtl;
+    unicode-bidi: embed;
 }
