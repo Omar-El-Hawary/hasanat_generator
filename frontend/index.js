@@ -1,5 +1,6 @@
 function main(){
     const params = new URLSearchParams(window.location.search)
+    console.log(params,params.daily)
     if (params.daily === 1){
         console.log("hi")
         getRandomPage()
