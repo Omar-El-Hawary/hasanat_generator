@@ -1,8 +1,6 @@
 function main(){
     const params = new URLSearchParams(window.location.search)
-    console.log(params.get("daily"))
     if (params.get("daily") == 1){
-        console.log("hi")
         getRandomPage()
     }
     // else if (hi){
@@ -18,7 +16,8 @@ function getRandomPage(){
     })
     .then(quranData =>{
         const page = quranData.data.ayahs
-        parsePage(page)
+        const parsedPage = parsePage(page)
+        document.getElementById("quran-verse").innerHTML = parsedPage
     })
 }
 
